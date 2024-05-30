@@ -96,7 +96,9 @@ def checkout(skus):
         total -= 10
         counts["V"] -= 2
 
-
+# STXYZ
+    while sum(counts.get("S", 0) + counts.get("T", 0) + counts.get("X", 0) + counts.get("Y", 0) + counts.get("Z", 0)):
+        
 
     for item in skus:
         # print(prices.get(item))
@@ -113,4 +115,5 @@ def checkout(skus):
 checkout("RRRQ") #should be 150 not 180
 checkout("RRRRRRQQ") #should be 300 not 330
 checkout("RRRQRQRR") #should be 300 not 330
+
 
