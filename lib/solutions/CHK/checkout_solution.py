@@ -16,6 +16,8 @@ def checkout(skus):
             a_count -= 5
         elif a_count % 3 == 0:
             total -= 20
+        else:
+            break
     
     if skus.count("B") > 1:
         for m in range(1, skus.count("B") + 1):
@@ -41,6 +43,7 @@ checkout("AAAAAAAAAAAAAAA")
 # checkout("AAABBBBBBBCCCDDDE")
 # checkout("F")
 # checkout("a")
+
 
 
 
