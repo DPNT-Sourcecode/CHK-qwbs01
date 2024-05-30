@@ -15,8 +15,10 @@ def checkout(skus):
 
     counts = {}
     for item in skus:
-        counts[item]
+        counts[item] = skus.count(item)
+    print(counts)
 
+#A
     a_count = skus.count("A")
     while a_count > 0:
         if a_count >= 5:
@@ -27,7 +29,8 @@ def checkout(skus):
             a_count -= 3
         else:
             break
-    
+
+#B & E
     b_count = skus.count("B")
     e_count = skus.count("E")
 
@@ -42,12 +45,15 @@ def checkout(skus):
         total -= 15
         b_count -= 2
 
+#F
     f_count = skus.count("F")
 
     while f_count >= 3:
         total -= 10
         f_count -= 3
 
+#H
+    while 
     # if skus.count("B") > 1 and skus.count("E") < 1:
     #     for m in range(1, skus.count("B") + 1):
     #         if m % 2 == 0:
@@ -64,7 +70,7 @@ def checkout(skus):
     #         print("Dicount E 30 triggered")
     #         total -= 30
     #         # print(total)
-    
+
     for item in skus:
         # print(prices.get(item))
         total += prices.get(item)
@@ -76,4 +82,4 @@ def checkout(skus):
 # checkout("EEEB") #should be 120
 # checkout("EE") #should be 80
 # checkout("EEEEBB") #should be 160
-# checkout("ABCDEABCDE") #should be 280
+checkout("ABCDEABCDE") #should be 280
