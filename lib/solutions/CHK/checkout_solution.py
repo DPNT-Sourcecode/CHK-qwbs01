@@ -114,6 +114,7 @@ def checkout(skus):
             if group_prices:
                 group_prices.pop(0)
 
+#Calculate total price
     for item in skus:
         # print(prices.get(item))
         total += prices.get(item)
@@ -129,7 +130,10 @@ def checkout(skus):
 # checkout("RRRQ") #should be 150 not 180
 # checkout("RRRRRRQQ") #should be 300 not 330
 # checkout("RRRQRQRR") #should be 300 not 330
-checkout("KK") #should be 120 not 130
-checkout("KKK") #should be 190 not 200
-checkout("KKKK") #should be 240 not 260
+# checkout("KK") #should be 120 not 130
+# checkout("KKK") #should be 190 not 200
+# checkout("KKKK") #should be 240 not 260
+checkout("STX") #should be 45 not 0
+checkout("STXSTX") #should be 90 not 57
+checkout("SSS") #should be 45 not 260
 
