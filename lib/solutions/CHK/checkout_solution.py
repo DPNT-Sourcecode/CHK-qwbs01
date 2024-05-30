@@ -4,7 +4,7 @@
 # skus = unicode string
 def checkout(skus):
     if len(skus) == 0:
-        return -1
+        return 0
     
     total = 0
     prices = {"A":50, "B": 30, "C": 20, "D":15, "E": 40}  
@@ -40,9 +40,4 @@ def checkout(skus):
     print(total)
     return total
 
-checkout("AA")
-checkout("AAAAAAAAAAAAAAA")
-checkout("ABCDE")
-checkout("AAABBBBBBBCCCDDDE")
-checkout("F")
-checkout("a")
+checkout("EEB")
