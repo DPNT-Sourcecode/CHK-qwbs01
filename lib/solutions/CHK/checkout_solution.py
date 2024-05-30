@@ -7,7 +7,7 @@ def checkout(skus):
         return 0
     
     total = 0
-    prices = {"A":50, "B": 30, "C": 20, "D":15, "E": 40, "F":10} 
+    prices = {"A":50, "B": 30, "C": 20, "D":15, "E": 40, "F":10, "G": 20, "H" 10:, "I" 35:, "J":, "K":, "L":, "M":, "N":, "O":, "P":, "Q":, "R":, "S":, "T":, "U":, "V":, "W":, "X":, "Y":, "Z": } 
     
     for item in skus:
         if item not in prices:
@@ -125,9 +125,3 @@ def checkout(skus):
 # checkout("EE") #should be 80
 # checkout("EEEEBB") #should be 160
 checkout("ABCDEABCDE") #should be 280
-
-
-
-
-
-
