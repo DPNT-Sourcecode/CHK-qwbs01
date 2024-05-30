@@ -107,10 +107,11 @@ def checkout(skus):
             counts[prod] -= 1
 
     group_prices.sort()
-    print(group_prices)
+    # print(group_prices)
     #Workout the cost of the group and remove from discount group
     while len(group_prices) >= 3:
         total -= sum(group_prices[:3])
+        total += 45
         for _ in range(3):
             if group_prices:
                 group_prices.pop(0)
@@ -137,4 +138,5 @@ def checkout(skus):
 checkout("STX") #should be 45 not 0
 checkout("STXSTX") #should be 90 not 57
 checkout("SSS") #should be 45 not 60
+
 
