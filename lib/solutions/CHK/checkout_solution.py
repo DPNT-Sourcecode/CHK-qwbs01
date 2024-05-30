@@ -96,14 +96,12 @@ def checkout(skus):
         total -= 10
         counts["V"] -= 2
 
-# STXYZ - solve for all == 20
+# STXYZ
     group_disc = "STXYZ"
-    group_prods = 0
-    group_price = 0
+    group_prices = []
     for prod in group_disc:
         if counts.get(prod, 0) > 0:
-            group_price += prices.get()
-            group_prods += 1
+            group_prices.append(prices.get(prod))
     
     while group_prods >= 3:
         total -= 15
@@ -126,12 +124,8 @@ def checkout(skus):
 # checkout("EE") #should be 80
 # checkout("EEEEBB") #should be 160
 # checkout("ABCDEABCDE") #should be 280
-checkout("RRRQ") #should be 150 not 180
-checkout("RRRRRRQQ") #should be 300 not 330
-checkout("RRRQRQRR") #should be 300 not 330
+# checkout("RRRQ") #should be 150 not 180
+# checkout("RRRRRRQQ") #should be 300 not 330
+# checkout("RRRQRQRR") #should be 300 not 330
 
-
-
-
-
-
+17, 17, 17, 20, 20
