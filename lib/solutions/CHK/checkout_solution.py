@@ -26,15 +26,15 @@ def checkout(skus):
     
     b_count = skus.count("B")
     e_count = skus.count("E")
-    if skus.count("E") > 1 and skus.count("B") > 0:
-        while e_count > 0:
+    if e_count > 1 and skus.count("B") > 0:
+        while e_count >= 2:
             if e_count >= 2:
                 total -= 30
                 e_count -= 2
                 b_count -= 1
-            elif a_count >= 3:
-                total -= 20
-                a_count -= 3
+            while b_count >= 2:
+                total -= 15
+                a_count -= 2
             else:
                 break
 
@@ -67,3 +67,4 @@ checkout("EEEB") #should be 120
 checkout("EE") #should be 80
 checkout("EEEEBB") #should be 160
 checkout("ABCDEABCDE") #should be 280
+
