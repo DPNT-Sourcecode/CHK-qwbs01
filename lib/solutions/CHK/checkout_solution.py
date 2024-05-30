@@ -44,7 +44,7 @@ def checkout(skus):
 
 checkout("EEB") #should be 80
 # checkout("EEEB") #should be 120
-checkout("EE") #should be 50
+checkout("EE") #should be 80
 checkout("EEEEBB") #should be 145
 
 
