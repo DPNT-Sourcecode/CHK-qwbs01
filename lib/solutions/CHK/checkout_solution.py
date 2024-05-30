@@ -110,6 +110,7 @@ def checkout(skus):
     # print(group_prices)
     #Workout the cost of the group and remove from discount group
     while len(group_prices) >= 3:
+        print("ln113", sum(group_prices[:3]))
         total -= sum(group_prices[:3])
         total += 45
         for _ in range(3):
@@ -138,5 +139,8 @@ def checkout(skus):
 checkout("STX") #should be 45 not 0
 checkout("STXSTX") #should be 90 not 57
 checkout("SSS") #should be 45 not 60
+checkout("SSSZ") #should be 65 not 66
+checkout("ZZZS") #should be 65 not 66
+checkout("STXS") #should be 62 not 65
 
 
