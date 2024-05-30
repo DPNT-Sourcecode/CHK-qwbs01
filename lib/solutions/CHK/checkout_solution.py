@@ -142,5 +142,3 @@ def checkout(skus):
 checkout("SSSZ") #should be 65 not 66
 checkout("ZZZS") #should be 65 not 66
 checkout("STXS") #should be 62 not 65
-
-
