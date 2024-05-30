@@ -75,7 +75,7 @@ def checkout(skus):
         total -= 50
         counts["P"] -= 5
 #Q & R
-    while counts.get("R", 0) > 3 and counts.get("Q", 0) > 0:
+    while counts.get("R", 0) >= 3 and counts.get("Q", 0) >= 1:
         total -= 30
         counts["R"] -= 3
         counts["Q"] -= 1
@@ -124,4 +124,7 @@ def checkout(skus):
 # checkout("EEEB") #should be 120
 # checkout("EE") #should be 80
 # checkout("EEEEBB") #should be 160
-checkout("ABCDEABCDE") #should be 280
+# checkout("ABCDEABCDE") #should be 280
+checkout("RRRQ") #should be 150 not 180
+checkout("RRRRRRQQ") #should be 300 not 330
+checkout("RRRQRQRR") #should be 300 not 330
