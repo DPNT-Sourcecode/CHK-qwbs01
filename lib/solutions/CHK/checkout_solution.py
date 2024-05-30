@@ -1,4 +1,4 @@
-
+import math
 
 # noinspection PyUnusedLocal
 # skus = unicode string
@@ -29,10 +29,12 @@ def checkout(skus):
             if m % 2 == 0:
                 total -= 15
     
+    # if skus.count("E") > 1:
+    #     for m in range(1, skus.count("B") + 1):
+    #         if m % 2 == 0:
+    #             total -= 40
     if skus.count("E") > 1:
-        for m in range(1, skus.count("B") + 1):
-            if m % 2 == 0:
-                total -= 40
+        total -= math.floor(skus.count("E")/2) * 40
     
     for item in skus:
         total += prices.get(item)
