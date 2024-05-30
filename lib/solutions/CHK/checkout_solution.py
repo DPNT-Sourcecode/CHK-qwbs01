@@ -13,16 +13,17 @@ def checkout(skus):
         else:
             return -1  
     if skus.count("A") > 2:
-        for n in range(0, skus.count("A")):
+        for n in range(1, skus.count("A")):
             if n % 3 == 0:
                 a_special += 20
         sum = sum - a_special
     if skus.count("B") > 1:
-        for m in range(0, skus.count("B")):
+        for m in range(1, skus.count("B")):
             if m % 2 == 0:
-                b_special += 20
+                b_special += 15
         sum = sum - b_special
     return sum
+
 
 
 
