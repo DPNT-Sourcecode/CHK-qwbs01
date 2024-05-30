@@ -7,7 +7,7 @@ def checkout(skus):
         return 0
     
     total = 0
-    prices = {"A":50, "B": 30, "C": 20, "D":15, "E": 40, "F":10, "G": 20, "H": 10, "I": 35, "J":60, "K":80, "L":90, "M":15, "N":40, "O":10, "P":50, "Q":30, "R":50, "S":30, "T":20, "U":40, "V":50, "W":20, "X":90, "Y":10, "Z":50} 
+    prices = {"A":50, "B": 30, "C": 20, "D":15, "E": 40, "F":10, "G": 20, "H": 10, "I": 35, "J":60, "K":70, "L":90, "M":15, "N":40, "O":10, "P":50, "Q":30, "R":50, "S":20, "T":20, "U":40, "V":50, "W":20, "X":17, "Y":20, "Z":21} 
     
     for item in skus:
         if item not in prices:
@@ -96,22 +96,7 @@ def checkout(skus):
         total -= 10
         counts["V"] -= 2
 
-    # if skus.count("B") > 1 and skus.count("E") < 1:
-    #     for m in range(1, skus.count("B") + 1):
-    #         if m % 2 == 0:
-    #             print("Dicount B 15 triggered")
-    #             total -= 15
-    
-    # # if skus.count("E") > 1:
-    # #     for m in range(1, skus.count("B") + 1):
-    # #         if m % 2 == 0:
-    # #             total -= 30
-    # if skus.count("E") > 1 and skus.count("B") > 0:
-    #     print(skus.count("B"))
-    #     for _ in range(1, math.floor(skus.count("B")/2) + 1):
-    #         print("Dicount E 30 triggered")
-    #         total -= 30
-    #         # print(total)
+
 
     for item in skus:
         # print(prices.get(item))
@@ -128,3 +113,4 @@ def checkout(skus):
 checkout("RRRQ") #should be 150 not 180
 checkout("RRRRRRQQ") #should be 300 not 330
 checkout("RRRQRQRR") #should be 300 not 330
+
