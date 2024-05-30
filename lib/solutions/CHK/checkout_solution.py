@@ -24,6 +24,10 @@ def checkout(skus):
         else:
             break
     
+    b_count = skus.count("B")
+    
+    
+
     if skus.count("B") > 1 and skus.count("E") < 1:
         for m in range(1, skus.count("B") + 1):
             if m % 2 == 0:
@@ -53,5 +57,3 @@ checkout("EEEB") #should be 120
 checkout("EE") #should be 80
 checkout("EEEEBB") #should be 160
 checkout("ABCDEABCDE") #should be 280
-
-
