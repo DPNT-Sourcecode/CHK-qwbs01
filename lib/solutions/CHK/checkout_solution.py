@@ -99,18 +99,18 @@ def checkout(skus):
 # STXYZ
     group_disc = "STXYZ"
     group_prices = []
+
     for prod in group_disc:
         if counts.get(prod, 0) > 0:
             group_prices.append(prices.get(prod))
+    
     group_prices.sort()
+
     while len(group_prices) >= 3:
         total -= sum(group_prices[:3])
-        group_prods -= 3
-
-    while counts.get("S", 0) or counts.get("T", 0) or counts.get("X", 0) or counts.get("Y", 0) or counts.get("Z", 0) > 0:
-    #calc the discount each time, find actual value of group
-        pass
-        # total -= group_disc
+        for _ in range(3):
+            if group_prices:
+                group_prices.pop(0)
 
     for item in skus:
         # print(prices.get(item))
@@ -129,3 +129,4 @@ def checkout(skus):
 # checkout("RRRQRQRR") #should be 300 not 330
 
 17, 17, 17, 20, 20
+
