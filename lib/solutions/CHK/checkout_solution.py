@@ -11,10 +11,10 @@ def checkout(skus):
     
     a_count = skus.count("A")
     while a_count > 0:
-        if a_count % 5 == 0:
+        if a_count >= 5:
             total -= 50
             a_count -= 5
-        elif a_count % 3 == 0:
+        elif a_count >= 3:
             total -= 20
         else:
             break
@@ -34,15 +34,15 @@ def checkout(skus):
             total += prices.get(item)
         else:
             return -1
-
+    print(total)
     return total
 
-# checkout("AA")
+checkout("AA")
 checkout("AAAAAAAAAAAAAAA")
-# checkout("ABCDE")
-# checkout("AAABBBBBBBCCCDDDE")
-# checkout("F")
-# checkout("a")
+checkout("ABCDE")
+checkout("AAABBBBBBBCCCDDDE")
+checkout("F")
+checkout("a")
 
 
 
