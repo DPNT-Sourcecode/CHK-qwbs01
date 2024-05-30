@@ -113,9 +113,7 @@ def checkout(skus):
         print("ln113", sum(group_prices[:3]))
         total -= sum(group_prices[:3])
         total += 45
-        for _ in range(3):
-            if group_prices:
-                group_prices.pop(0)
+        group_prices = group_prices[3:]
 
 #Calculate total price
     for item in skus:
