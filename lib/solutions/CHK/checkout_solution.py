@@ -33,7 +33,7 @@ def checkout(skus):
     #     for m in range(1, skus.count("B") + 1):
     #         if m % 2 == 0:
     #             total -= 30
-    if skus.count("E") > 1:
+    if skus.count("E") > 1 and skus.count("B") > 0:
         total -= math.floor(skus.count("E")/2) * 30
     
     for item in skus:
@@ -46,5 +46,6 @@ checkout("EEB") #should be 80
 # checkout("EEEB") #should be 120
 checkout("EE") #should be 80
 checkout("EEEEBB") #should be 145
+
 
 
