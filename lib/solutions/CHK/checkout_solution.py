@@ -11,8 +11,8 @@ def checkout(skus):
         else:
             return -1  
     if skus.count("A") > 2:
-        #calculate discount
-        
+        for n in range(0, skus.count("A"), )
         pass
     return sum
+
 
