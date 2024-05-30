@@ -100,12 +100,14 @@ def checkout(skus):
     group_disc = "STXYZ"
     group_prices = []
 
+    #Analyse the prices of the group
     for prod in group_disc:
         if counts.get(prod, 0) > 0:
             group_prices.append(prices.get(prod))
     
     group_prices.sort()
 
+    #Workout the cost of the group and remove from discount group
     while len(group_prices) >= 3:
         total -= sum(group_prices[:3])
         for _ in range(3):
@@ -127,6 +129,4 @@ def checkout(skus):
 # checkout("RRRQ") #should be 150 not 180
 # checkout("RRRRRRQQ") #should be 300 not 330
 # checkout("RRRQRQRR") #should be 300 not 330
-
-17, 17, 17, 20, 20
 
