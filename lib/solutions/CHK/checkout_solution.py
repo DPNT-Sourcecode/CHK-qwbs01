@@ -39,10 +39,12 @@ def checkout(skus):
     for item in skus:
         total += prices.get(item)
 
-    # print(total)
+    print(skus, total)
     return total
 
-# checkout("EEB") #should be 80
+checkout("EEB") #should be 80
 # checkout("EEEB") #should be 120
+checkout("EE") #should be 50
+checkout("EEEEBB") #should be 145
 
 
