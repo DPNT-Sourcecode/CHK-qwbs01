@@ -27,7 +27,6 @@ def checkout(skus):
     if skus.count("B") > 1 and skus.count("E") < 1:
         for m in range(1, skus.count("B") + 1):
             if m % 2 == 0:
-                print("ln30")
                 total -= 15
     
     # if skus.count("E") > 1:
@@ -36,20 +35,18 @@ def checkout(skus):
     #             total -= 30
     if skus.count("E") > 1 and skus.count("B") > 0:
         for _ in range(1, skus.count("B") + 1):
-            print("ln38 trigger")
             total -= 30
-            print(total)
+            # print(total)
     
     for item in skus:
-        print(prices.get(item))
         total += prices.get(item)
 
     print(skus, total)
     return total
 
-# checkout("EEB") #should be 80
-# checkout("EEEB") #should be 120
-# checkout("EE") #should be 80
+checkout("EEB") #should be 80
+checkout("EEEB") #should be 120
+checkout("EE") #should be 80
 checkout("EEEEBB") #should be 160
-# checkout("ABCDEABCDE") #shoul be 280
+checkout("ABCDEABCDE") #should be 280
 
