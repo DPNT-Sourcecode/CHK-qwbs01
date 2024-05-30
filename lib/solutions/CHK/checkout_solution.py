@@ -9,6 +9,10 @@ def checkout(skus):
     total = 0
     prices = {"A":50, "B": 30, "C": 20, "D":15, "E": 40}  
     
+    for item in skus:
+        if item not in prices:
+            return -1
+
     a_count = skus.count("A")
     while a_count > 0:
         if a_count >= 5:
@@ -16,6 +20,7 @@ def checkout(skus):
             a_count -= 5
         elif a_count >= 3:
             total -= 20
+            a_count -= 3
         else:
             break
     
@@ -30,10 +35,8 @@ def checkout(skus):
                 total -= 40
     
     for item in skus:
-        if item in prices:
-            total += prices.get(item)
-        else:
-            return -1
+        total += prices.get(item)
+
     print(total)
     return total
 
@@ -43,7 +46,3 @@ checkout("ABCDE")
 checkout("AAABBBBBBBCCCDDDE")
 checkout("F")
 checkout("a")
-
-
-
-
