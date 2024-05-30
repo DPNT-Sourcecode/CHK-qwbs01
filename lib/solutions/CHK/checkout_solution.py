@@ -53,7 +53,10 @@ def checkout(skus):
         f_count -= 3
 
 #H
-    while 
+    while counts["H"] >= 10:
+        total -= 20
+        counts["H"] -= 10
+
     # if skus.count("B") > 1 and skus.count("E") < 1:
     #     for m in range(1, skus.count("B") + 1):
     #         if m % 2 == 0:
