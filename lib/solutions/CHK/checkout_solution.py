@@ -34,7 +34,7 @@ def checkout(skus):
     #         if m % 2 == 0:
     #             total -= 40
     if skus.count("E") > 1:
-        total -= math.floor(skus.count("E")/2) * 40
+        total -= math.floor(skus.count("E")/2) * 40 + 10
     
     for item in skus:
         total += prices.get(item)
@@ -42,4 +42,5 @@ def checkout(skus):
     print(total)
     return total
 
-checkout("EEB")
+checkout("EEB") #should be 80
+checkout("EEEB") #should be 120
