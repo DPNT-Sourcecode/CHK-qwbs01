@@ -53,46 +53,46 @@ def checkout(skus):
         f_count -= 3
 
 #H
-    while counts["H"] >= 10:
+    while counts.get("H", 0) >= 10:
         total -= 20
         counts["H"] -= 10
-    while counts["H"] >= 5:
+    while counts.get("H", 0) >= 5:
         total -= 5
         counts["H"] -= 5
 
 #K
-    while counts["K"] >= 2:
+    while counts.get("K", 0) >= 2:
         total -= 10
-        counts["H"] -= 2
+        counts["K"] -= 2
 
 #N
-    while counts["M"] >= 1 and counts["N"] >= 3:
+    while counts.get("M", 0) >= 1 and counts.get("N", 0) >= 3:
         total -= 15
         counts["M"] -= 1
         counts["N"] -= 3
 #P
-    while counts["P"] >= 5:
+    while counts.get("P", 0) >= 5:
         total -= 50
         counts["P"] -= 5
 #Q & R
-    while counts["R"] > 3 and counts["Q"] > 0:
+    while counts.get("R", 0) > 3 and counts.get("Q", 0) > 0:
         total -= 30
         counts["R"] -= 3
         counts["Q"] -= 1
     
-    while counts["Q"] >= 3:
+    while counts.get("Q", 0) >= 3:
         total -= 10
         counts["Q"] -= 3
 
 #U
-    while counts["U"] >= 4:
+    while counts.get("U", 0) >= 4:
         total -= 40
         counts["U"] -= 4
 #V
-    while counts["V"] >= 3:
+    while counts.get("V", 0) >= 3:
         total -= 20
         counts["V"] -= 3
-    while counts["V"] >= 2:
+    while counts.get("V", 0) >= 2:
         total -= 10
         counts["V"] -= 2
 
@@ -125,6 +125,7 @@ def checkout(skus):
 # checkout("EE") #should be 80
 # checkout("EEEEBB") #should be 160
 checkout("ABCDEABCDE") #should be 280
+
 
 
 
