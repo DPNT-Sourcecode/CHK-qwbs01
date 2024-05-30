@@ -7,11 +7,13 @@ def checkout(skus):
         return 0
     
     total = 0
-    prices = {"A":50, "B": 30, "C": 20, "D":15, "E": 40, "F":10}  
+    prices = {"A":50, "B": 30, "C": 20, "D":15, "E": 40, "F":10} 
     
     for item in skus:
         if item not in prices:
             return -1
+
+    
 
     a_count = skus.count("A")
     while a_count > 0:
@@ -73,5 +75,6 @@ def checkout(skus):
 # checkout("EE") #should be 80
 # checkout("EEEEBB") #should be 160
 # checkout("ABCDEABCDE") #should be 280
+
 
 
