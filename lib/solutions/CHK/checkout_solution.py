@@ -7,6 +7,8 @@ def checkout(skus):
     prices = {"A":50, "B": 30, "C": 20, "D":15, "E": 40}  
     a_count = 0
     a_count = skus.count("A")
+    if len(skus) == 0:
+        return -1
     while a_count > 0:
         if a_count % 5 == 0:
             sum -= 50
