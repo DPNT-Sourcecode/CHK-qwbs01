@@ -72,9 +72,19 @@ def checkout(skus):
         counts["N"] -= 3
 #P
     while counts["P"] >= 5:
-        total -= 
-#Q
+        total -= 50
+        counts["P"] -= 5
+#Q & R
+    while counts["R"] > 3 and counts["Q"] > 0:
+        total -= 30
+        counts["R"] -= 3
+        counts["Q"] -= 1
+    
+    while counts["Q"] >= 3:
+        total -= 10
+        counts["Q"] -= 3
 #R
+
 #U
 #V
 
@@ -107,5 +117,6 @@ def checkout(skus):
 # checkout("EE") #should be 80
 # checkout("EEEEBB") #should be 160
 checkout("ABCDEABCDE") #should be 280
+
 
 
