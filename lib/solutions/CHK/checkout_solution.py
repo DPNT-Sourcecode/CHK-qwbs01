@@ -56,6 +56,20 @@ def checkout(skus):
     while counts["H"] >= 10:
         total -= 20
         counts["H"] -= 10
+    while counts["H"] >= 5:
+        total -= 5
+        counts["H"] -= 5
+
+#K
+    while counts["K"] >= 2:
+        total -= 10
+        counts["H"] -= 2
+
+#N
+
+#P
+#Q
+#
 
     # if skus.count("B") > 1 and skus.count("E") < 1:
     #     for m in range(1, skus.count("B") + 1):
@@ -86,3 +100,4 @@ def checkout(skus):
 # checkout("EE") #should be 80
 # checkout("EEEEBB") #should be 160
 checkout("ABCDEABCDE") #should be 280
+
