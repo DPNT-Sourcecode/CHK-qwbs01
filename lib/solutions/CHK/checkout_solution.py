@@ -16,7 +16,7 @@ def checkout(skus):
     counts = {}
     for item in skus:
         counts[item] = skus.count(item)
-    print(counts)
+    # print(counts)
 
 #A
     a_count = skus.count("A")
@@ -102,11 +102,12 @@ def checkout(skus):
 
     #Analyse the prices of the group
     for prod in group_disc:
-        if counts.get(prod, 0) > 0:
+        while counts.get(prod, 0) > 0:
             group_prices.append(prices.get(prod))
-    
-    group_prices.sort()
+            counts[prod] -= 1
 
+    group_prices.sort()
+    print(group_prices)
     #Workout the cost of the group and remove from discount group
     while len(group_prices) >= 3:
         total -= sum(group_prices[:3])
@@ -135,5 +136,5 @@ def checkout(skus):
 # checkout("KKKK") #should be 240 not 260
 checkout("STX") #should be 45 not 0
 checkout("STXSTX") #should be 90 not 57
-checkout("SSS") #should be 45 not 260
+checkout("SSS") #should be 45 not 60
 
