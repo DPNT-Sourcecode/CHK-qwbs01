@@ -62,7 +62,7 @@ def checkout(skus):
 
 #K
     while counts.get("K", 0) >= 2:
-        total -= 10
+        total -= 20
         counts["K"] -= 2
 
 #N
@@ -129,4 +129,7 @@ def checkout(skus):
 # checkout("RRRQ") #should be 150 not 180
 # checkout("RRRRRRQQ") #should be 300 not 330
 # checkout("RRRQRQRR") #should be 300 not 330
+checkout("KK") #should be 120 not 130
+checkout("KKK") #should be 190 not 200
+checkout("KKKK") #should be 240 not 260
 
