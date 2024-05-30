@@ -24,9 +24,10 @@ def checkout(skus):
         else:
             break
     
-    if skus.count("B") > 1:
+    if skus.count("B") > 1 and skus.count("E") < 1:
         for m in range(1, skus.count("B") + 1):
             if m % 2 == 0:
+                print("ln30")
                 total -= 15
     
     # if skus.count("E") > 1:
@@ -51,3 +52,4 @@ def checkout(skus):
 # checkout("EE") #should be 80
 checkout("EEEEBB") #should be 160
 # checkout("ABCDEABCDE") #shoul be 280
+
