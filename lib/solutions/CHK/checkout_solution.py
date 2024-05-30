@@ -27,6 +27,7 @@ def checkout(skus):
     if skus.count("B") > 1 and skus.count("E") < 1:
         for m in range(1, skus.count("B") + 1):
             if m % 2 == 0:
+                print("Dicount B 15 triggered")
                 total -= 15
     
     # if skus.count("E") > 1:
@@ -35,18 +36,20 @@ def checkout(skus):
     #             total -= 30
     if skus.count("E") > 1 and skus.count("B") > 0:
         for _ in range(1, skus.count("B") + 1):
+            print("Dicount E 15 triggered")
             total -= 30
             # print(total)
     
     for item in skus:
+        # print(prices.get(item))
         total += prices.get(item)
 
     print(skus, total)
     return total
 
-checkout("EEB") #should be 80
-checkout("EEEB") #should be 120
-checkout("EE") #should be 80
-checkout("EEEEBB") #should be 160
+# checkout("EEB") #should be 80
+# checkout("EEEB") #should be 120
+# checkout("EE") #should be 80
+# checkout("EEEEBB") #should be 160
 checkout("ABCDEABCDE") #should be 280
 
