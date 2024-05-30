@@ -102,9 +102,9 @@ def checkout(skus):
     for prod in group_disc:
         if counts.get(prod, 0) > 0:
             group_prices.append(prices.get(prod))
-    
-    while group_prods >= 3:
-        total -= 15
+    group_prices.sort()
+    while len(group_prices) >= 3:
+        total -= sum(group_prices[:3])
         group_prods -= 3
 
     while counts.get("S", 0) or counts.get("T", 0) or counts.get("X", 0) or counts.get("Y", 0) or counts.get("Z", 0) > 0:
