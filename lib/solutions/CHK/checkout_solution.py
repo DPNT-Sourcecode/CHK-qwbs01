@@ -28,4 +28,12 @@ def checkout(skus):
             sum += prices.get(item)
         else:
             return -1
-    return sum
+    print(sum)
+    return print(sum)
+
+checkout("")
+checkout("AAAAAAAAAAAAAAA")
+checkout("ABCDE")
+checkout("AAABBBBBBBCCCDDDE")
+checkout("F")
+checkout("a")
