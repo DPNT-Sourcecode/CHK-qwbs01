@@ -96,8 +96,15 @@ def checkout(skus):
         total -= 10
         counts["V"] -= 2
 
-# STXYZ
-    group_disc = 0
+# STXYZ - solve for all == 20
+    group_disc = "STXYZ"
+    group_prods = 0
+    for prod in group_disc:
+        if counts.get(prod, 0) > 0:
+            group_prods += 1
+    
+    while group_prods >= 3:
+        total -= 
     while counts.get("S", 0) or counts.get("T", 0) or counts.get("X", 0) or counts.get("Y", 0) or counts.get("Z", 0) > 0:
     #calc the discount each time, find actual value of group
         pass
@@ -118,6 +125,7 @@ def checkout(skus):
 checkout("RRRQ") #should be 150 not 180
 checkout("RRRRRRQQ") #should be 300 not 330
 checkout("RRRQRQRR") #should be 300 not 330
+
 
 
 
