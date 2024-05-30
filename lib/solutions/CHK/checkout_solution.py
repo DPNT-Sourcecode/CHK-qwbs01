@@ -5,6 +5,7 @@
 def checkout(skus):
     sum = 0
     a_special = 0
+    b_special = 0
     prices = {"A":50, "B": 30, "C": 20, "D":15}
     for item in skus:
         if item in prices:
@@ -12,10 +13,17 @@ def checkout(skus):
         else:
             return -1  
     if skus.count("A") > 2:
-        for n in range(0, skus.count("A"), 3):
-            a_special += 20
+        for n in range(0, skus.count("A")):
+            if n % 3 == 0:
+                a_special += 20
         sum = sum - a_special
+    if skus.count("B") > 1:
+        for m in range(0, skus.count("B")):
+            if m % 2 == 0:
+                b_special += 20
+        sum = sum - b_special
     return sum
+
 
 
 
