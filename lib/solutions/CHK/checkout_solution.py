@@ -31,9 +31,10 @@ def checkout(skus):
     print(total)
     return total
 
-checkout("AA")
-# checkout("AAAAAAAAAAAAAAA")
+# checkout("AA")
+checkout("AAAAAAAAAAAAAAA")
 # checkout("ABCDE")
 # checkout("AAABBBBBBBCCCDDDE")
 # checkout("F")
 # checkout("a")
+
