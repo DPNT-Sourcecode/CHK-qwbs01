@@ -97,8 +97,11 @@ def checkout(skus):
         counts["V"] -= 2
 
 # STXYZ
-    while sum(counts.get("S", 0) + counts.get("T", 0) + counts.get("X", 0) + counts.get("Y", 0) + counts.get("Z", 0)):
+    group_disc = 0
+    while counts.get("S", 0) or counts.get("T", 0) or counts.get("X", 0) or counts.get("Y", 0) or counts.get("Z", 0) > 0:
     #calc the discount each time, find actual value of group
+        pass
+        # total -= group_disc
 
     for item in skus:
         # print(prices.get(item))
@@ -115,6 +118,7 @@ def checkout(skus):
 checkout("RRRQ") #should be 150 not 180
 checkout("RRRRRRQQ") #should be 300 not 330
 checkout("RRRQRQRR") #should be 300 not 330
+
 
 
 
