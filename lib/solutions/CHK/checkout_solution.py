@@ -13,8 +13,6 @@ def checkout(skus):
         if item not in prices:
             return -1
 
-    print("line16", total)
-
     a_count = skus.count("A")
     while a_count > 0:
         if a_count >= 5:
@@ -31,21 +29,20 @@ def checkout(skus):
             if m % 2 == 0:
                 total -= 15
     
-    if skus.count("E") > 1:
-        for m in range(1, skus.count("B") + 1):
-            if m % 2 == 0:
-                total -= 30
     # if skus.count("E") > 1:
-    #     total -= math.floor(skus.count("E")/2) * 40
-    #     print(total)
+    #     for m in range(1, skus.count("B") + 1):
+    #         if m % 2 == 0:
+    #             total -= 30
+    if skus.count("E") > 1:
+        total -= math.floor(skus.count("E")/2) * 30
     
     for item in skus:
         total += prices.get(item)
 
-    print(total)
+    # print(total)
     return total
 
-checkout("EEB") #should be 80
-checkout("EEEB") #should be 120
+# checkout("EEB") #should be 80
+# checkout("EEEB") #should be 120
 
 
