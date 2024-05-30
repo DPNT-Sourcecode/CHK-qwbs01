@@ -25,8 +25,18 @@ def checkout(skus):
             break
     
     b_count = skus.count("B")
-    
-    
+    e_count = skus.count("E")
+    if skus.count("E") > 1 and skus.count("B") > 0:
+        while e_count > 0:
+            if e_count >= 2:
+                total -= 30
+                e_count -= 2
+                b_count -= 1
+            elif a_count >= 3:
+                total -= 20
+                a_count -= 3
+            else:
+                break
 
     if skus.count("B") > 1 and skus.count("E") < 1:
         for m in range(1, skus.count("B") + 1):
