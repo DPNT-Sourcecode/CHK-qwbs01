@@ -12,7 +12,6 @@ def checkout(skus):
             sum += prices.get(item)
         else:
             return -1  
-    print(sum)
     if skus.count("A") > 2:
         for n in range(1, skus.count("A")):
             if n % 3 == 0:
@@ -24,10 +23,7 @@ def checkout(skus):
             if m % 2 == 0:
                 b_special += 15
         sum = sum - b_special
-    
     return sum
-
-checkout("AAAA")
 
 
 
